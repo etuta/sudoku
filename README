@@ -1,0 +1,49 @@
+# Sudoku Game
+
+## Overview
+This project is a Java-based Sudoku game featuring a graphical user interface. It provides an interactive Sudoku puzzle experience with multiple difficulty levels and visual feedback for user actions.
+
+There are two main implementations in this project:
+- **Applet-based Sudoku (`Sudoku.java`, `SolvedBoards.java`)**: The primary playable version, designed as a Java Applet using AWT.
+- **Swing-based Sudoku Panel (`SudokuPanel`)**: A partial implementation using Swing, referencing classes (`SudokuPuzzle`, `SudokuGenerator`, `SudokuPuzzleType`) that are not present in this repository and may not be runnable as-is.
+
+## Features
+- **Difficulty Levels**: Easy, Medium, Hard
+- **Interactive Board**: Click a square, then click a number to fill it in
+- **Color Feedback**:
+  - Blue: Pre-filled numbers
+  - Green: Correct user input
+  - Red: Incorrect user input
+  - Yellow: Highlighted selection
+- **Win Message**: Displays a congratulatory message when the puzzle is solved
+
+## How to Build and Run
+### Requirements
+- Java Development Kit (JDK) 8 or earlier (for applet support)
+
+### Compile
+Navigate to the `src` directory and compile the Java files:
+```bash
+javac Sudoku.java SolvedBoards.java
+```
+
+### Run (Applet)
+Applets are deprecated in modern Java and browsers. If you have an older JDK, you can use the `appletviewer` tool:
+
+1. Create an HTML file (e.g., `Sudoku.html`) with the following content:
+    ```html
+    <html>
+    <body>
+      <applet code="Sudoku.class" width="600" height="720"></applet>
+    </body>
+    </html>
+    ```
+2. Run the applet:
+    ```bash
+    appletviewer Sudoku.html
+    ```
+
+> **Note:** Modern Java versions and browsers do not support applets. For best results, use JDK 8 or earlier.
+
+## Author
+- Eliza Tuta
